@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 100px;
+  box-sizing: border-box;
+  font-family: 'Inter Tight', sans-serif;
+  color: #050505;
+  letter-spacing: 0%;
+}
+
+.home-content-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.home-content-left {
+  width: 299px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* KATEGORİ LİSTESİ BÖLÜMÜ */
+.all-categories-btn {
+  width: 174px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 15px;
+  color: rgba(5, 5, 5, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 300ms;
+  margin-top: 26px;
+}
+.all-categories-btn:hover {
+  color: #f8f8f8;
+  background-color: #9bb537;
+}
+.category-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 235px;
+  height: 416px;
+  overflow-y: auto;
+  margin-top: 42px;
+  margin-bottom: 64px;
+  margin-right: 64px;
+}
+.category-item {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Yatayda sola hizalama */
+  margin-bottom: 24px; /* Kategori isimleri arasında 24px boşluk */
+}
+.category-btn {
+  width: auto;
+  height: 20px;
+  background-color: transparent;
+  color: rgba(5, 5, 5, 0.3);
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: capitalize;
+  padding: 0; /* İçeride ekstra boşluk olmaması için sıfırladık */
+  cursor: pointer;
+  transition: 300ms;
+}
+.category-btn:hover,
+.category-btn:active {
+  color: #9bb537;
+}
+/* ----------------------------------------------------------------- */
+
+/* POPÜLER TARİFLER BÖLÜMÜ */
+h3 {
+  width: 221px;
+  height: 28px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0%;
+  margin-bottom: 32px;
+}
+.popular-recipe-list {
+  padding: 0px;
+  width: 235px;
+  height: 364px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.popular-recipe-item {
+  display: flex;
+  flex-direction: row;
+}
+.popular-recipe-item div {
+  margin-left: 16px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.popular-recipe-img {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.popular-recipe-item-title {
+  font-size: 14px;
+  line-height: 1.285;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+.popular-recipe-item-info {
+  margin: 0px;
+  width: 155px;
+  height: 41px;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: rgba(5, 5, 5, 0.8);
+  overflow: hidden;
+  /* white-space: normal; */
+  display: -webkit-box; /* Flexbox benzeri yapı */
+  -webkit-box-orient: vertical; /* Dikey yönlendirme */
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+/* ------------------------------------------------------------- */
+
+.home-content-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FİLTRELEME BÖLÜMÜ */
+.filter-container {
+  width: 780px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.filter-container label {
+  display: flex;
+  flex-direction: column; /* Label içinde dikey hizalama */
+  align-items: flex-start; /* Label içeriğini sola hizala */
+  color: rgba(5, 5, 5, 0.5);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.285;
+  letter-spacing: 0%;
+}
+.filter-container input,
+.filter-container select {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 8px; /* Label ile alan arasında boşluk */
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(5, 5, 5, 0.5);
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 15px;
+}
+.filter-container input {
+  padding-left: 36px;
+}
+
+#timeSelect,
+#areaSelect,
+#ingredientSelect {
+  padding-left: 18px;
+}
+.search-div {
+  width: 278px;
+  height: 74px;
+}
+.search-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  margin-right: 12px; /* İkon ve metin arasında 12px boşluk */
+  position: absolute; /* İkonun yerini belirleme */
+  left: 10px; /* Sol taraftan 10px uzaklık */
+  top: 49px; /* Yüksekliği ortalama (?)*/
+  transform: translateY(-50%); /* Dikey ortalama sağlama */
+}
+/* input[type='text']:focus + .search-icon {
+  fill: #9bb537;
+} */
+.filter-close-icon {
+  position: absolute; /* İkonun yerini belirleme */
+  right: 18px; /* Sağ taraftan 18px uzaklık */
+  top: 49px; /* Yüksekliği ortalama (?)*/
+  transform: translateY(-50%); /* Dikey ortalama sağlama */
+}
+.time-div {
+  width: 125px;
+  height: 74px;
+}
+.area-div {
+  width: 141px;
+  height: 74px;
+}
+.ingredient-div {
+  width: 188px;
+  height: 74px;
+}
+
+/* ----------------------------------------------------------------- */
